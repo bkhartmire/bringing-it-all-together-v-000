@@ -29,8 +29,8 @@ class Dog
 
   def self.find_by_name(name)
     sql = <<-SQL
-      SELECT * 
-      FROM dogs 
+      SELECT *
+      FROM dogs
       WHERE name = ?
       LIMIT 1
     SQL
@@ -38,4 +38,12 @@ class Dog
       self.new_from_db(row)
     end.first
   end
+
+  def update
+  end
+
+  def save
+  end
+
+  
 end
